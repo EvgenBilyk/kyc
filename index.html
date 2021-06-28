@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC analysis</title>
+
+
+    <!-- Кодировка веб-страницы -->
+    <meta charset="utf-8">
+    <!-- Настройка viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body class="mb-5">
+    <div class="container col-8">
+        <div class="row mt-5">
+            <div class="alert alert-info" role="alert">
+                <div class="fs-5">
+                    Вивчення клієнта юр.особи KYC
+                </div>
+            </div>
+            <p>
+                <span class="badge bg-warning text-dark">Структура власності</span>
+                <span class="badge bg-warning text-dark">PEPs</span>
+                <span class="badge bg-warning text-dark">клієнт для аналізу НФМ</span>
+                <span class="badge bg-warning text-dark">Компанія оболонка</span>
+                <span class="badge bg-warning text-dark">Клієнт корп. бізнесу з високим ризиком</span>
+                <span class="badge bg-danger">1.40/78</span>
+                <span class="badge bg-danger">1.40/51</span>
+                <span class="badge bg-danger">1.16/31</span>
+                <span class="badge bg-info text-dark">Заявка подана через Приват24</span>
+            </p>
+
+            <div class="col-3">
+                <div class="">
+
+                    <p class="title"> Інфо по клієнту</p>
+                    <ul class="list-group p-0 m-0 ">
+                        <li class="list-group-item list-group-item-light">
+                            НАЗВА: <span class="info-client text-start">АГРО-ДАР IНВЕСТ ПП</span>
+                        </li>
+                        <li class="list-group-item list-group-item-light">ЄДРПОУ:
+                            <span class="info-client text-start">39970487</span>
+                        </li>
+                        <li class="list-group-item list-group-item-light">
+                            ClientID:
+                            <span class="info-client text-start">1030417675</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <button class="btn btn-primary mt-2 button-header btn-sm" id="newAutorhide">Передати заявку</button>
+                <div class="input-group mb-3 mt-3 newAutorhide hide">
+                    <input type="text" class="form-control" placeholder="Введіть LDAP" aria-label="Recipient's username"
+                        aria-describedby="button-addon2">
+                    <button class="btn btn-primary" type="button" id="pepIdAdd">OK</button>
+                </div>
+
+                <button class="btn btn-primary mt-2 button-header btn-sm" id="authorRp">Дані автора заявки</button>
+                <p class="authorRp hide mt-3">Борисова Неля Богданівна DD040589BNB</p>
+                <button class="btn btn-primary mt-2 button-header btn-sm">Перевірка даних в ЄКБ</button>
+
+                <div class="dropdown mt-2">
+                    <button class="btn btn-dark dropdown-toggle button-header btn-sm" type="button"
+                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Корисні посилання
+                    </button>
+                    <p class="">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li class="dropdown-item"><a target="_blank" href="https://www.dowjones.com/"> Dow Jones</a>
+                        </li>
+                        <li class="dropdown-item"><a target="_blank"
+                                href="https://worldcheck.refinitiv.com">World-Check</a></li>
+                        <li class="dropdown-item"><a target="_blank" href="https://youcontrol.com.ua/ru/">YouControl</a>
+                        </li>
+                        <li class="dropdown-item"><a target="_blank" href="https://reyestr.court.gov.ua/">Єдиний
+                                державний реєстр
+                                судових рішень</a></li>
+                        <li class="dropdown-item"><a target="_blank"
+                                href="https://docs.google.com/document/d/15eV17tHAK91BY5vEThhbkN7zJ1OqH6H1x5jnmcPZwsA/edit">Інструкція
+                                щодо порядку формування висновків стосовно
+                                прозорості
+                                структури власності клієнтів - юридичних осіб</a></li>
+                        <li class="dropdown-item"><a target="_blank"
+                                href="https://docs.google.com/document/d/1CpULFjvTrsaSvPVFM0chMNvZvEHVnxn1/edit">Інструкція
+                                з перевірки організаторів азартних ігор (КВЄД
+                                92.00)</a></li>
+                        <li class="dropdown-item"><a target="_blank"
+                                href="https://docs.google.com/document/d/1jRDQML-QMfTIuc2fBxAv0l2I56T6cfkCmuceuT2jp8A/edit">Інструкція
+                                з перевірки фінансових небанківських
+                                установ</a>
+                        </li>
+                        <li class="dropdown-item"><a target="_blank"
+                                href="https://docs.google.com/document/d/11xZdAHs5V5R3at4K84AUZp-tpJ2nZaO_/edit">Інструкція
+                                з перевірки неприбуткових організацій</a>
+                        </li>
+                        <li class="dropdown-item"><a target="_blank"
+                                href="https://docs.google.com/document/d/12afVq2a25SvPeN6rIg-NX2IlnQxA1WGx89sjUIFf10w/edit">Інструкція
+                                по FATCA</a></li>
+                    </ul>
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-9">
+                <div class="remark">
+                    <p class="title">Зауваження по заявці</p>
+                    <div class="alert alert-danger" role="alert">
+                        Прошу надати пояснення (Економічну доцільність) стосовно операцій з перерахування та зарахування
+                        грошових коштів з призначенням платежу "Надання/повернення фiн.допом.", які здійснювались у
+                        період за 2020р.-1 півріччя 2021р , з юр. особами : а)ТОВ ВЕСНА, ЄДРПОУ 14215188 б)ФГ "ТЕТЯНА",
+                        ЄДРПОУ 32094577 в) ФГ "ІМПУЛЬС", ЄДРПОУ 25585272 г) ПП "ПУЛЬС ПРИРОДИ", ЄДРПОУ 3209456632725777.
+                        Надати договори позик за 2020р.-1 півріччя 2021р.
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        Прошу надати пояснення (Економічну доцільність) стосовно операцій з перерахування та зарахування
+                        грошових коштів з призначенням платежу "Надання/повернення фiн.допом.", які здійснювались у
+                        період за 2020р.-1 півріччя 2021р , з юр. особами : а)ТОВ ВЕСНА, ЄДРПОУ 14215555 б)ФГ "ТЕТЯНА",
+                        ЄДРПОУ 32094599 в) ФГ "ІМПУЛЬС", ЄДРПОУ 25585272 г) ПП "ПУЛЬС ПРИРОДИ", ЄДРПОУ 3209456632725777.
+                        Надати договори позик за 2020р.-1 півріччя 2021р.
+                    </div>
+                </div>
+                <div class="doc">
+                    <p class="title">Оберіть документ який необхідно перевірити</p>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Оберіть документ який необхідно перевірити</option>
+                        <option value="1">Висновок про прозорість структури власності</option>
+                        <option value="2">Анкета по приєднанню до умов та правил (2747)</option>
+                        <option value="3">Анкета по приєднанню до умов та правил (2386)</option>
+                        <option value="2">Анкета по приєднанню до умов та правил (2748)</option>
+                        <option value="2">Статут (Положення)</option>
+                        <option value="2">Схематичне зображення структури власності клієнта</option>
+                        <option value="2">Інші супровідні документи</option>
+                        <option value="2">Свідоцтво про держ.реєстрацію / Виписка</option>
+                        <option value="2">Чек-листок з валідації структури власності</option>
+                        <option value="2">Положение подразделения</option>
+                        <option value="2">Форма самосертифікації FATCA - W8 / W9</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-success" id="btnAcceptForm">Позитивне рішення</button>
+                <button type="button" class="btn btn-danger" id="btnDeclineForm">Негативне рішення</button>
+                <button type="button" class="btn btn-warning" id="btnRemarkForm">Зауваження/уточнення даних</button>
+            </div>
+        </div>
+
+        <!-- accept form -->
+        <div class="acceptForm hide">
+            <div class="row">
+                <p class="title mt-4 text-success">Перевірте дані клієнта, для формування висновку</p>
+            </div>
+            <form action="" class="">
+                <div class="alert alert-light fs-5 fw-bold fst-italic" role="alert">
+                    Дані про юр.особу, по якій формується висновок
+                </div>
+                <div class="mb-3 row text-success">
+                    <label for="nameJur" class="col-sm-4 col-form-label">Найменування клієнта (Повне та
+                        скорочене):</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="nameJur"
+                            value="АГРО-ДАР ІНВЕСТ ПРИВАТНЕ ПІДПРИЄМСТВО(АГРО-ДАР IНВЕСТ ПП)">
+                    </div>
+                </div>
+                <div class="mb-3 row text-success">
+                    <label for="littleNameJur" class="col-sm-4 col-form-label">Скорочене найменування клієнта:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="littleNameJur" value="АГРО-ДАР IНВЕСТ ПП">
+                    </div>
+                </div>
+                <div class="mb-3 row text-success">
+                    <label for="edrpouFormAccept" class="col-sm-4 col-form-label">ЄДРПОУ:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="edrpouFormAccept" value="39970487">
+                    </div>
+                </div>
+                <div class="alert alert-light fs-5 fw-bold fst-italic" role="alert">
+                    Дані про КБВ юр.особи
+                </div>
+
+                <table class="table table-hover">
+                    <tr class="table">
+                        <th>ПІБ</th>
+                        <th>Дата народження</th>
+                        <th>Країна постійного проживання</th>
+                    </tr>
+                    <tbody>
+                        <tr class="table">
+                            <td>ГРИНЬ ЮРІЙ ІВАНОВИЧ</td>
+                            <td>11.11.1962</td>
+                            <td>Україна</td>
+                        </tr>
+                        <tr class="table">
+                            <td>МІХНО ВОЛОДИМИР ІВАНОВИЧ</td>
+                            <td>05.11.1978</td>
+                            <td>Україна</td>
+                        </tr>
+                        <tr class="table">
+                            <td>СВІСТУН ПЕТРО МИКОЛАЙОВИЧ</td>
+                            <td>14.10.1973</td>
+                            <td>Україна</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-light fs-5 fw-bold fst-italic" role="alert">
+                    Скопіюйте дані з таблиці в поле "Дані про Кінцевих бенефіціарних власників". Необхідно дані вводити
+                    в
+                    фарматі: "ПІБ, _____________________ р.н., країна постійного проживання ____________."
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1 " class="form-label text-dark">Дані про Кінцевих
+                        бенефіціарних
+                        власників:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+
+                <div class="alert alert-light fs-5 fw-bold fst-italic" role="alert">
+                    Контрольні запитання
+                </div>
+                <div class="control-question">
+                    <div class="alert alert-light fs-6 fw-bold fst-italic" role="alert">
+                        1. Співпадають дані КБВ із анкети з КБВ вказанними в ЄДР?
+                    </div>
+                    <div class="btn-group ml-3" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="quest_1" id="quest_1_Y" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="quest_1_Y">ТАК</label>
+
+                        <input type="radio" class="btn-check" name="quest_1" id="quest_1_N" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="quest_1_N">НІ</label>
+                    </div>
+
+                    <!-- hide block LE consilience EDR -->
+
+                    <div class="notConsilienceEDR hide ml-5 text-dark">
+                        <div class="alert alert-light fs-6 fst-italic" role="alert">
+                            Оберіть розходження КБВ в анкеті та в ЄДР
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input text-dark" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Згідно даних ЄДР КБВ інша особа
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Згідно даних ЄДР КБВ відсутні
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                            <label class="form-check-label" for="flexRadioDefault3">
+                                Згідно даних ЄДР клієнт має КБВ
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                            <label class="form-check-label" for="flexRadioDefault4">
+                                Різниця у кількості КБВ визначенних у
+                                клієнта та зазначених на ЄДР
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+                            <label class="form-check-label" for="flexRadioDefault5">
+                                ЄДР немає інформації про
+                                наявність/відсутність КБВ
+                            </label>
+                        </div>
+                        <div class="form-check mt-4">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                            <label class="form-check-label" for="flexCheckIndeterminate">
+                                Клієнт не належить до групи вигодоодержувачів (вигодонабувачів)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- hide block LE consilience EDR  end-->
+
+
+                <div class="alert alert-light fs-6 fw-bold fst-italic" role="alert">
+                    2. До Клієнта застосовуються вимоги FATCA?
+                </div>
+                <div class="btn-group ml-3" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="quest_2" id="quest_2_Y" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="quest_2_Y">ТАК</label>
+
+                    <input type="radio" class="btn-check" name="quest_2" id="quest_2_N" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="quest_2_N">НІ</label>
+                </div>
+
+
+                <!-- hide block fatca -->
+                <div class="fatcaQuest hide ml-5 text-dark">
+                    <div class="form-check mb-4 mt-4">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked
+                            disabled>
+                        <label class="form-check-label" for="flexCheckCheckedDisabled">
+                            Клієнт FATCA
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Юридична адреса США
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Фактична адреса США
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            TIN
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Відсутній TIN
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Форма W8
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Форма W9
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Особисте судження менеджера фронт-офісу про наявність критеріїв FATCA
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Відмова від FATCA
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            GIIN
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Власники США (від 10%)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            КБВ США
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Наявність пасивних доходів
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            simple_nonreporting_NFFE
+                        </label>
+                    </div>
+                </div>
+
+                <!-- hide block fatca end-->
+
+                <div class="alert alert-light fs-6 fw-bold fst-italic" role="alert">
+                    3. КБВ у юр.особи зі статусом PEPs?
+                </div>
+                <div class="btn-group ml-3" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="quest_3" id="quest_3_Y" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="quest_3_Y">ТАК</label>
+
+                    <input type="radio" class="btn-check" name="quest_3" id="quest_3_N" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="quest_3_N">НІ</label>
+                </div>
+
+                <!-- hide block PEPS -->
+                <div class="pepBlock hide ml-5 text-dark">
+                    <div class="form-check">
+                        <input class="form-check-input text-dark peps" type="radio" name="pep" id="pep_1">
+                        <label class="form-check-label" for="pep_1">
+                            КБВ належить до PEPs (у клієнта вже є ознака)
+                        </label>
+                    </div>
+
+                    <div class="form-check mb-4 mt-4 ml-5 hide pepIdent">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked
+                            disabled>
+                        <label class="form-check-label" for="flexCheckCheckedDisabled">
+                            АГРО-ДАР IНВЕСТ ПП є пов'язаною особою з КУЧМА ЛЕОНІД ДАНИЛОВИЧ, який є національним
+                            публічним діячем - президент України
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input text-dark peps" type="radio" name="pep" id="pep_2">
+                        <label class="form-check-label" for="pep_2">
+                            Cеред КБВ клієнта не виявлено PEPs
+                        </label>
+                    </div>
+                    <div class="form-check mb-4 mt-4 hide ml-5 pepNot">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked
+                            disabled>
+                        <label class="form-check-label" for="flexCheckCheckedDisabled">
+                            Cеред КБВ клієнта не виявлено PEPs
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input text-dark peps" type="radio" name="pep" id="pep_3">
+                        <label class="form-check-label" for="pep_3">
+                            КБВ належить до PEPs (необхідно додати ознаку)
+                        </label>
+                    </div>
+                    <div class="addPep hide ml-5 mt-4">
+                        <div class="form-check">
+                            <input class="form-check-input text-dark peps" type="radio" name="pepAdd" id="npdPEP">
+                            <label class="form-check-label" for="npdPEP">
+                                Клієнт є пов’язаною особою з національним публічним діячем, членом його сім’ї або
+                                пов’язаною особою? (додавати до
+                                групи KA80M5Y711F10)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input text-dark peps" type="radio" name="pepAdd" id="ipdPEP">
+                            <label class="form-check-label" for="ipdPEP">
+                                Клієнт є пов’язаною особою з іноземним публічним діячем, членом його сім’ї або
+                                пов’язаною особою? (додавати до
+                                групи KA80O48Z2DJ10)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input text-dark peps" type="radio" name="pepAdd" id="mpdPEP">
+                            <label class="form-check-label" for="mpdPEP">
+                                Клієнт є пов’язаною особою з діячем, що виконуює політичні функції в міжнародних
+                                організаціях, членом його сім’ї або
+                                пов’язаною особою? (додавати до
+                                групи KA80PSW8BV10)
+                            </label>
+                        </div>
+
+                        <div class="input-group mb-3 mt-3 pepAdd">
+                            <input type="number" class="form-control col-3" placeholder="Введіть ID"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-primary btn-sm" type="button" id="pepIdAdd">Додати клієнта до групи
+                                PEPs</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- hide block PEPS end -->
+
+                <div class="alert alert-light fs-6 fw-bold fst-italic" role="alert">
+                    4. Вкажіть фактичних КБВ
+                </div>
+                <div class="kbvCheckBlock text-dark ml-5">
+                    <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" checked>
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            ГРИНЬ ЮРІЙ ІВАНОВИЧ
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" checked>
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            МІХНО ВОЛОДИМИР ІВАНОВИЧ
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" checked>
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            СВІСТУН ПЕТРО МИКОЛАЙОВИЧ
+                        </label>
+                    </div>
+                    <div class="form-check hide markovKbv">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" checked>
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            МАРКОВ СЕМЕН ОБРАМОВИЧ
+                        </label>
+                    </div>
+                    <div class="btn-group ml-3 mt-4" role="group" aria-label="Basic radio toggle button group">
+                        <button type="button" class="btn btn-primary btn-sm" id="addKbv">Додати КБВ</button>
+                    </div>
+                    <div class="mb-3 row mt-3">
+
+                        <div class="input-group mb-3 addKbvInput hide">
+                            <input type="text" class="form-control col-4"
+                                placeholder="Введіть ID політично значущої особи" aria-label="Recipient's username"
+                                aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="button" id="addKbvId">Додати</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row ">
+                    <div class="btn-group mt-4" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-secondary">Назад</button>
+                        <button type="button" class="btn btn-success">Далі</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>''
+</body>
+
+</html>
