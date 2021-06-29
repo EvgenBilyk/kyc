@@ -48,18 +48,18 @@ document.querySelectorAll('.peps').forEach(elem => elem.onclick = pepCheck)
 function pepCheck() {
     if (this.id == "pep_1") {
         document.querySelector('.pepIdent').classList.remove('hide');
-        document.querySelector('.pepNot').classList.add('hide');
         document.querySelector('.addPep').classList.add('hide');
+        console.log('pep_1')
     } else if (this.id == "pep_2") {
-        document.querySelector('.pepNot').classList.remove('hide');
         document.querySelector('.pepIdent').classList.add('hide');
-        document.querySelector('.addPep').classList.add('hide');
-    } else if (this.id == "pep_3") {
-
         document.querySelector('.addPep').classList.remove('hide');
-        document.querySelector('.pepNot').classList.add('hide');
-        document.querySelector('.pepIdent').classList.add('hide');
+        console.log('pep_2')
     }
+    // } else if (this.id == "pep_3") {
+    //     document.querySelector('.addPep').classList.remove('hide');
+    //     document.querySelector('.pepNot').classList.add('hide');
+    //     document.querySelector('.pepIdent').classList.add('hide');
+    // }
 }
 
 document.getElementById('quest_4_Y').onclick = () => {
