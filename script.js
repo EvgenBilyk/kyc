@@ -26,8 +26,6 @@ document.getElementById('groupKbvAdd').onclick = () => {
     }
 }
 
-
-
 document.getElementById('quest_2_Y').onclick = () => {
     document.querySelector('.fatcaQuest').classList.remove('hide');
 }
