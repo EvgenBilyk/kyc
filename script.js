@@ -11,6 +11,23 @@ document.getElementById('quest_1_Y').onclick = () => {
     document.querySelector('.notConsilienceEDR').classList.add('hide');
 }
 
+document.getElementById('quest_1_1_N').onclick = () => {
+    document.querySelector('.groupKbv').classList.add('hide');
+}
+
+document.getElementById('quest_1_1_Y').onclick = () => {
+    document.querySelector('.groupKbv').classList.remove('hide');
+}
+
+document.getElementById('groupKbvAdd').onclick = () => {
+    let group = document.getElementById('groupName').value;
+    if (group !== "") {
+        document.querySelector('.nameGroup').innerHTML = `Клієнт належить до групи ${group}`
+    }
+}
+
+
+
 document.getElementById('quest_2_Y').onclick = () => {
     document.querySelector('.fatcaQuest').classList.remove('hide');
 }
@@ -47,6 +64,16 @@ function pepCheck() {
     }
 }
 
+document.getElementById('quest_4_Y').onclick = () => {
+    document.querySelector('.kbvCheckBlock').classList.add('hide');
+    document.querySelector('.kbvCheckBlockVar').classList.remove('hide');
+}
+
+document.getElementById('quest_4_N').onclick = () => {
+    document.querySelector('.kbvCheckBlock').classList.remove('hide');
+    document.querySelector('.kbvCheckBlockVar').classList.add('hide');
+}
+
 document.getElementById('addKbv').onclick = () => {
     document.querySelector('.addKbvInput').classList.toggle('hide');
 }
@@ -61,5 +88,9 @@ document.getElementById('newAutorhide').onclick = () => {
 
 document.getElementById('authorRp').onclick = () => {
     document.querySelector('.authorRp').classList.toggle('hide');
+}
+
+document.getElementById('addKbv').onclick = () => {
+    document.querySelector('.addKbvInput').classList.toggle('hide');
 }
 

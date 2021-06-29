@@ -283,12 +283,28 @@
                                 наявність/відсутність КБВ
                             </label>
                         </div>
-                        <div class="form-check mt-4">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                            <label class="form-check-label" for="flexCheckIndeterminate">
-                                Клієнт не належить до групи вигодоодержувачів (вигодонабувачів)
-                            </label>
+                        <div class="alert alert-light fs-6 fst-italic" role="alert">
+                            Клієнт належить до групи вигодоодержувачів (вигодонабувачів), які здійснюють вирішальний
+                            вплив?
                         </div>
+                        <div class="btn-group ml-3" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="quest_1_1" id="quest_1_1_Y" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="quest_1_1_Y">ТАК</label>
+
+                            <input type="radio" class="btn-check" name="quest_1_1" id="quest_1_1_N" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="quest_1_1_N">НІ</label>
+                        </div>
+                        <div class="groupKbv hide ml-3 mt-2">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control col-4" placeholder="Введіть назву групи"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2" id="groupName">
+                                <button class="btn btn-primary" type="button" id="groupKbvAdd">Додати</button>
+                            </div>
+                            <div class="nameGroup fst-italic fw-bold"></div>
+                        </div>
+
+
+
                     </div>
                 </div>
                 <!-- hide block LE consilience EDR  end-->
@@ -485,9 +501,39 @@
                 <!-- hide block PEPS end -->
 
                 <div class="alert alert-light fs-6 fw-bold fst-italic" role="alert">
-                    4. Вкажіть фактичних КБВ
+                    4. Фактичні КБВ та КБВ вказані клієнтом відрізняються?
                 </div>
-                <div class="kbvCheckBlock text-dark ml-5">
+                <div class="btn-group ml-3" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="quest_4" id="quest_4_Y" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="quest_4_Y">ТАК</label>
+
+                    <input type="radio" class="btn-check" name="quest_4" id="quest_4_N" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="quest_4_N">НІ</label>
+                </div>
+                <div class="kbvCheckBlock text-dark ml-5 hide">
+                    <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" checked
+                            disabled>
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            ГРИНЬ ЮРІЙ ІВАНОВИЧ
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" checked
+                            disabled>
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            МІХНО ВОЛОДИМИР ІВАНОВИЧ
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" checked
+                            disabled>
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            СВІСТУН ПЕТРО МИКОЛАЙОВИЧ
+                        </label>
+                    </div>
+                </div>
+                <div class="kbvCheckBlockVar text-dark ml-5 hide">
                     <div class="form-check ">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" checked>
                         <label class="form-check-label" for="flexCheckIndeterminate">
