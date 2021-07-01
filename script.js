@@ -97,4 +97,7 @@ if (document.querySelector('.body').offsetWidth < 992) {
     document.querySelectorAll('.btn-sm-decision').forEach(elem =>
         elem.classList.add('btn-dec')
     )
+    document.querySelectorAll('.btn-sm-decision').forEach(elem =>
+        elem.classList.add('mt-2')
+    )
 }
