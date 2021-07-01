@@ -22,7 +22,7 @@
 </head>
 
 <body class="mb-5">
-    <div class="container col-8">
+    <div class="container col-lg-8">
         <div class="row mt-5">
             <div class="alert alert-info" role="alert">
                 <div class="fs-5">
@@ -37,7 +37,7 @@
                 <span class="badge bg-info text-dark">Заявка подана через Приват24</span>
             </p>
 
-            <div class="col-3">
+            <div class="col-lg-3">
                 <div class="">
 
                     <p class="title"> Інфо по клієнту</p>
@@ -109,7 +109,7 @@
                 </div>
 
             </div>
-            <div class="col-9">
+            <div class="col-lg-9">
                 <div class="remark">
                     <p class="title">Зауваження по заявці</p>
                     <div class="alert alert-danger" role="alert">
@@ -146,11 +146,12 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-4 btn-decision">
             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-success" id="btnAcceptForm">Позитивне рішення</button>
-                <button type="button" class="btn btn-danger" id="btnDeclineForm">Негативне рішення</button>
-                <button type="button" class="btn btn-warning" id="btnRemarkForm">Зауваження/уточнення даних</button>
+                <button type="button" class="btn btn-success btn-decision" id="btnAcceptForm">Позитивне рішення</button>
+                <button type="button" class="btn btn-danger btn-decision" id="btnDeclineForm">Негативне рішення</button>
+                <button type="button" class="btn btn-warning btn-decision" id="btnRemarkForm">Зауваження/уточнення
+                    даних</button>
             </div>
         </div>
 
@@ -164,22 +165,23 @@
                     Дані про юр.особу, по якій формується висновок
                 </div>
                 <div class="mb-3 row text-success">
-                    <label for="nameJur" class="col-sm-4 col-form-label">Найменування клієнта (Повне та
+                    <label for="nameJur" class="col-lg-sm-4 col-lg-form-label">Найменування клієнта (Повне та
                         скорочене):</label>
-                    <div class="col-sm-8">
+                    <div class="col-lg-sm-8">
                         <input type="text" class="form-control" id="nameJur"
                             value="АГРО-ДАР ІНВЕСТ ПРИВАТНЕ ПІДПРИЄМСТВО(АГРО-ДАР IНВЕСТ ПП)">
                     </div>
                 </div>
                 <div class="mb-3 row text-success">
-                    <label for="littleNameJur" class="col-sm-4 col-form-label">Скорочене найменування клієнта:</label>
-                    <div class="col-sm-8">
+                    <label for="littleNameJur" class="col-lg-sm-4 col-lg-form-label">Скорочене найменування
+                        клієнта:</label>
+                    <div class="col-lg-sm-8">
                         <input type="text" class="form-control" id="littleNameJur" value="АГРО-ДАР IНВЕСТ ПП">
                     </div>
                 </div>
                 <div class="mb-3 row text-success">
-                    <label for="edrpouFormAccept" class="col-sm-4 col-form-label">ЄДРПОУ:</label>
-                    <div class="col-sm-8">
+                    <label for="edrpouFormAccept" class="col-lg-sm-4 col-lg-form-label">ЄДРПОУ:</label>
+                    <div class="col-lg-sm-8">
                         <input type="text" class="form-control" id="edrpouFormAccept" value="39970487">
                     </div>
                 </div>
@@ -292,7 +294,7 @@
                         </div>
                         <div class="groupKbv hide ml-3 mt-2">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control col-4" placeholder="Введіть назву групи"
+                                <input type="text" class="form-control col-lg-4" placeholder="Введіть назву групи"
                                     aria-label="Recipient's username" aria-describedby="button-addon2" id="groupName">
                                 <button class="btn btn-primary" type="button" id="groupKbvAdd">Додати</button>
                             </div>
@@ -483,7 +485,7 @@
                         </div>
 
                         <div class="input-group mb-3 mt-3 pepAdd">
-                            <input type="number" class="form-control col-3" placeholder="Введіть ID"
+                            <input type="number" class="form-control col-lg-3" placeholder="Введіть ID"
                                 aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button class="btn btn-primary btn-sm" type="button" id="pepIdAdd">Додати клієнта до групи
                                 PEPs</button>
@@ -564,7 +566,7 @@
                     <div class="mb-3 row mt-3">
 
                         <div class="input-group mb-3 addKbvInput hide">
-                            <input type="text" class="form-control col-4"
+                            <input type="text" class="form-control col-lg-4"
                                 placeholder="Введіть ID політично значущої особи" aria-label="Recipient's username"
                                 aria-describedby="button-addon2">
                             <button class="btn btn-primary" type="button" id="addKbvId">Додати</button>

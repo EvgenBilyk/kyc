@@ -34,3 +34,17 @@ a {
 .hide {
     display: none;
 }
+
+@media (min-width: 766px) {
+    .btn-decision {
+        width: 100%;     
+    }
+
+    .btn-group {
+        width: 100%;     
+    }
+
+    .container {
+        width: 100%;
+    }   
+}
