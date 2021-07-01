@@ -92,3 +92,9 @@ document.getElementById('addKbv').onclick = () => {
     document.querySelector('.addKbvInput').classList.toggle('hide');
 }
 
+if (document.querySelector('.body').offsetWidth < 992) {
+    document.querySelector('.btn-decision').classList.remove('btn-group');
+    document.querySelectorAll('.btn-sm-decision').forEach(elem =>
+        elem.classList.add('btn-dec')
+    )
+}
